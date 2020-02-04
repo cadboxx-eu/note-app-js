@@ -1,4 +1,4 @@
-// import { Note } from "../src/note-model"
+
 
 (function(exports) {
   function NoteListView(noteList) {
@@ -6,7 +6,10 @@
   }
 
   NoteListView.prototype.displayNotes = function() {
-    console.log(this.noteList)
+      let i;
+      for (i = 0; i < this.noteList.viewAll().length; i++) {
+      return ('<ul>' + `<li><div>${this.noteList.viewAll()[i].text}</div></li>` + '</ul>')
+      }
   }
 
   exports.NoteListView = NoteListView

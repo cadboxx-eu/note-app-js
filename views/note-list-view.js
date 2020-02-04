@@ -7,9 +7,12 @@
 
   NoteListView.prototype.displayNotes = function() {
       let i;
+      let output = []
       for (i = 0; i < this.noteList.viewAll().length; i++) {
-      return ('<ul>' + `<li><div>${this.noteList.viewAll()[i].text}</div></li>` + '</ul>')
+      output.push(`<li><div>${this.noteList.viewAll()[i].text}</div></li>`)
       }
+
+      return `<ul>${output.join("")}</ul>`
   }
 
   exports.NoteListView = NoteListView

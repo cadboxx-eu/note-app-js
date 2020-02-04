@@ -16,7 +16,7 @@
   }
 
   function notesDisplayMultiple() {
-    console.log('displayNotes')
+    console.log('displayNotesMultiple')
 
     let noteList = new NoteList()
     noteList.addNote('hello')
@@ -28,8 +28,17 @@
   }
 
 
+  function notesDisplayNone() {
+    console.log('displayNotesNone')
+
+    let noteList = new NoteList()
+    noteListView = new NoteListView(noteList)
+    
+    expect(noteListView.displayNotes()).toEqual('Nothing to see here...')
+  }
   
   notesDisplay()
   notesDisplayMultiple()
+  notesDisplayNone()
 })(this)
 

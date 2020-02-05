@@ -11,7 +11,7 @@
     console.log('testViewNote')
     expect(note.viewNote()).toEqual(text)
   }
-  
+
   testNoteText()
   testViewNote()
 })(this)

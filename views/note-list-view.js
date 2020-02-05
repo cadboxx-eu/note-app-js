@@ -10,7 +10,8 @@
       if (listLength > 0) {
         for (i = 0; i < listLength; i++) {
           var shortText = this.noteList.viewAll()[i].text.slice(0,20)
-          output.push(`<li><div>${shortText}</div></li>`)
+          var id = this.noteList.viewAll()[i].id
+          output.push(`<li><div><a href="#${id}">${shortText}</a></div></li>`)
           }
           return `<ul>${output.join("")}</ul>`
       } else {

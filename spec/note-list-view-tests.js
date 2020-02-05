@@ -34,9 +34,23 @@
     
     expect(noteListView.displayNotes()).toEqual('Nothing to see here...')
   }
+
+  function notesDisplayFirst20Characters() {
+    console.log('displayNotesMultiple')
+
+    let noteList = new NoteList()
+    let longNote = '!'.repeat(21)
+    let shortNote = '!'.repeat(20)
+    noteList.addNote(longNote)
+
+    noteListView = new NoteListView(noteList)
+    
+    expect(noteListView.displayNotes()).toEqual(`<ul><li><div>${shortNote}</div></li></ul>`)
+  }
   
   notesDisplay()
   notesDisplayMultiple()
   notesDisplayNone()
+  notesDisplayFirst20Characters()
 })(this)
 

@@ -31,7 +31,7 @@
       console.log(`Expected ${value} to be a ${thing}`)
     }
   }
-
+  
   var expect = function (value) {
     return new Test(value)
   }

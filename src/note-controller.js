@@ -8,11 +8,16 @@
     element.innerHTML = text;
   }
 
-  var controller = function() {
-    return new Controller()
+  Controller.prototype.addNote = function(text) {
+    this.noteListModel.addNote(text)
   }
 
-  exports.controller = controller
+  Controller.prototype.displayNotes = function() {
+    var noteListView = new NoteListView(this.noteListModel)
+    this.changeText(noteListView.displayNotes())
+  }
+
+  exports.Controller = Controller
 })(this)
 
 

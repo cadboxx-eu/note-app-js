@@ -1,8 +1,6 @@
 
 (function(exports) {
   let noteListView
-  // let noteList = new NoteList()
-  // noteList.addNote('hello')
 
   function notesDisplay() {
     console.log('displayNotes')

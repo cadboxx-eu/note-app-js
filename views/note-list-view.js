@@ -1,5 +1,3 @@
-
-
 (function(exports) {
   function NoteListView(noteList) {
     this.noteList = noteList
@@ -17,7 +15,6 @@
       } else {
         return 'Nothing to see here...'
       }
-
   }
 
   exports.NoteListView = NoteListView

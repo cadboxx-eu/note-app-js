@@ -28,6 +28,13 @@
     }
   }
 
+  Controller.prototype.createSubmitEvent = function() {
+    document.getElementById("text").addEventListener("submit", function(event){
+      event.preventDefault()
+      console.log(event)
+    })
+  }
+
   exports.Controller = Controller
 })(this)
 

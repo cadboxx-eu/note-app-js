@@ -2,11 +2,13 @@
   <head>
     <title>Note App</title>
     <link rel="stylesheet" href="">
+
   </head>
   <body>
+     
       
     <div id='app'>hello</div>
-    <form id="text" action="#notes" method='post'>
+    <form id="text" action="#notes/0" method='post'>
       <input type="textarea" name="note-text" placeholder="Insert Note Here...">
       <input type="submit" value="Submit Note">
     </form>
@@ -16,6 +18,11 @@
     <script src='./views/note-list-view.js'></script>
     <script src='./views/single-note-view.js'></script>
     <script src='./src/note-controller.js'></script>
+
+    <script>
+        var c = new Controller()
+        c.createSubmitEvent()
+      </script>
   </body>
 
 

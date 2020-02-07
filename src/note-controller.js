@@ -28,11 +28,17 @@
     }
   }
 
-  Controller.prototype.createSubmitEvent = function() {
-    document.getElementById("text").addEventListener("submit", function(event){
-      event.preventDefault()
-      console.log(event)
-    })
+  Controller.prototype.submitNote = function() {
+   document.getElementById("text").addEventListener("submit", () => {
+     this.addNote(submitEvent(event))
+     this.displayNotes()
+   })
+
+   function submitEvent(event){
+    event.preventDefault()
+    noteText = event.srcElement.elements["note-text"].value
+    return noteText
+   }
   }
 
   exports.Controller = Controller

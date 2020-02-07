@@ -2,12 +2,14 @@
   <head>
     <title>Note App</title>
     <link rel="stylesheet" href="">
-    <!-- <script src='./src/note-controller.js'></script> -->
   </head>
   <body>
       
     <div id='app'>hello</div>
-    <div id='note'></div>
+    <form id="text" action="#notes" method='post'>
+      <input type="textarea" name="note-text" placeholder="Insert Note Here...">
+      <input type="submit" value="Submit Note">
+    </form>
 
     <script src='./src/note-model.js'></script>
     <script src='./src/note-list-model.js'></script>

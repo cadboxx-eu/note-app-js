@@ -17,6 +17,17 @@
     this.changeText(noteListView.displayNotes())
   }
 
+  Controller.prototype.showNoteOnLinkClick = function() {
+    var model = this.noteListModel
+    window.onhashchange = function() {
+      var noteID = location.hash.split("#notes/")[1]
+      var longText = model.list[noteID].text
+      document
+        .getElementById("app")
+        .innerHTML = longText
+    }
+  }
+
   exports.Controller = Controller
 })(this)
 

@@ -10,7 +10,7 @@
 
     noteListView = new NoteListView(noteList)
     
-    expect(noteListView.displayNotes()).toEqual('<ul><li><div><a href="#0">hello</a></div></li></ul>')
+    expect(noteListView.displayNotes()).toEqual('<ul><li><div><a href="#notes/0">hello</a></div></li></ul>')
   }
 
   function notesDisplayMultiple() {
@@ -22,7 +22,7 @@
 
     noteListView = new NoteListView(noteList)
     
-    expect(noteListView.displayNotes()).toEqual('<ul><li><div><a href="#0">hello</a></div></li><li><div><a href="#1">howdy</a></div></li></ul>')
+    expect(noteListView.displayNotes()).toEqual('<ul><li><div><a href="#notes/0">hello</a></div></li><li><div><a href="#notes/1">howdy</a></div></li></ul>')
   }
 
 
@@ -45,7 +45,7 @@
 
     noteListView = new NoteListView(noteList)
     
-    expect(noteListView.displayNotes()).toEqual(`<ul><li><div><a href="#0">${shortNote}</a></div></li></ul>`)
+    expect(noteListView.displayNotes()).toEqual(`<ul><li><div><a href="#notes/0">${shortNote}</a></div></li></ul>`)
   }
   
   

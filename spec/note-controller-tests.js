@@ -22,21 +22,21 @@
     expect(document.getElementById("app").innerHTML).toInclude('howdy')
   }
 
-
   function viewSingleNote() {
     console.log('viewSingleNote')
-    mockElement()
+
     let note = '?'.repeat(21)
-    let noteId = noteController.noteListModel.list[0].id
 
     noteController.addNote(note)
     noteController.displayNotes()
-    
-    let link = document.querySelectorAll(`a[href='#${noteId}']`);
-    console.log(link)
-    link.click()
-    expect(document.body.innerHTML).toInclude(note)
 
+    noteController.showNoteOnLinkClick()
+    window.location.hash = "#notes/0"
+    window.location.hash = "#notes/1"
+
+    console.log(document.getElementById('app').innerHTML)
+    
+    expect(document.getElementById('app').innerHTML).toInclude(note)
   }
 
   function mockElement() {
@@ -45,7 +45,10 @@
     document.getElementsByTagName('body').item(0).appendChild(mockedElement)
   }
 
-
+  function clearAppElement() {
+    var element = document.getElementById('app')
+    return element.innerHTML = ""
+  }
 
   newControllerIsInstantiated()
   controllerPassedNoteListModel()
